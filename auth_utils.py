@@ -13,6 +13,7 @@ JWT_KEY = config('JWT_KEY')
 class AuthJwtCsrf():
     # fastapiが用意している認証周りのもの
     pwd_ctx = CryptContext(schemes=["bcrypt"], deprecated="auto")
+    # JWTのハッシュを作成する時に使うもの
     secret_key = JWT_KEY
 
     # ユーザーが入力したパスワードをハッシュ化する。
